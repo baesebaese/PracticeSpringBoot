@@ -9,7 +9,13 @@ public class FirstController {
 
     @GetMapping("/hi")
     public String niceToMeetYou(Model model) {
-        model.addAttribute("username", "배세");
+        model.addAttribute("username", "stranger");
         return "greeting";
+    }
+
+    @GetMapping("/bye")
+    public String seeYouNext(Model model) {
+        model.addAttribute("nickname", "배세배세");
+        return "goodbye";
     }
 }
